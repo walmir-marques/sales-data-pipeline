@@ -1,5 +1,7 @@
 with orders as (
     select * from {{ ref('fct_orders') }}
+    WHERE order_date >= '2026-01-01' 
+    AND order_date <= '2026-04-30'
 ),
 
 monthly as (

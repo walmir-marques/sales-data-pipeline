@@ -1,0 +1,19 @@
+[2026-04-09T15:26:40.532+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-04-09T15:26:40.788+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sales_pipeline_complete.ingest_api_bronze scheduled__2026-04-08T00:00:00+00:00 [queued]>
+[2026-04-09T15:26:40.806+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sales_pipeline_complete.ingest_api_bronze scheduled__2026-04-08T00:00:00+00:00 [queued]>
+[2026-04-09T15:26:40.807+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 3
+[2026-04-09T15:26:40.833+0000] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): ingest_api_bronze> on 2026-04-08 00:00:00+00:00
+[2026-04-09T15:26:40.842+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'sales_pipeline_complete', 'ingest_api_bronze', 'scheduled__2026-04-08T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/sales_pipeline_dag.py', '--cfg-path', '/tmp/tmp2435t2i2']
+[2026-04-09T15:26:40.845+0000] {standard_task_runner.py:91} INFO - Job 2: Subtask ingest_api_bronze
+[2026-04-09T15:26:40.845+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=183) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-04-09T15:26:40.845+0000] {standard_task_runner.py:63} INFO - Started process 184 to run task
+[2026-04-09T15:26:40.945+0000] {task_command.py:426} INFO - Running <TaskInstance: sales_pipeline_complete.ingest_api_bronze scheduled__2026-04-08T00:00:00+00:00 [running]> on host 00ff0cf2a205
+[2026-04-09T15:26:41.097+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='walmir' AIRFLOW_CTX_DAG_ID='sales_pipeline_complete' AIRFLOW_CTX_TASK_ID='ingest_api_bronze' AIRFLOW_CTX_EXECUTION_DATE='2026-04-08T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-08T00:00:00+00:00'
+[2026-04-09T15:26:41.099+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-04-09T15:26:41.178+0000] {logging_mixin.py:188} INFO - ✅ Ingestão Python → Bronze
+[2026-04-09T15:26:41.178+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-04-09T15:26:41.179+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-04-09T15:26:41.192+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=sales_pipeline_complete, task_id=ingest_api_bronze, execution_date=20260408T000000, start_date=20260409T152640, end_date=20260409T152641
+[2026-04-09T15:26:41.232+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-04-09T15:26:41.264+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-04-09T15:26:41.265+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

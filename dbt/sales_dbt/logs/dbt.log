@@ -1744,3 +1744,42 @@ drop table if exists "sales_db"."gold"."top_products__dbt_backup" cascade
 [0m23:55:49.418556 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F37F4097D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F37F408350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F3775BC690>]}
 [0m23:55:49.418556 [debug] [MainThread]: Flushing usage events
 [0m23:55:50.320219 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:09:56.120062 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002222DDBDDD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002222DDBA7D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002222DDBF710>]}
+
+
+============================== 12:09:56.124061 | f3b5301d-7074-4655-af18-dbda8581d6f1 ==============================
+[0m12:09:56.124061 [info ] [MainThread]: Running with dbt=1.11.8
+[0m12:09:56.124938 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Walmir\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt run --models gold_monthly_revenue', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'D:\\MEUS_PROJETOS\\sales-pipeline\\dbt\\sales_dbt\\logs'}
+[0m12:09:56.124938 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+Usage of `--models`, `--model`, and `-m` is deprecated in favor of `--select` or
+`-s`.
+[0m12:09:56.124938 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'f3b5301d-7074-4655-af18-dbda8581d6f1', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002222EE53410>]}
+[0m12:09:56.601770 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f3b5301d-7074-4655-af18-dbda8581d6f1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002222EDE9E90>]}
+[0m12:09:56.634754 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f3b5301d-7074-4655-af18-dbda8581d6f1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002222A50D790>]}
+[0m12:09:56.635759 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m12:09:57.035806 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m12:09:57.806582 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m12:09:57.806582 [debug] [MainThread]: Partial parsing: updated file: sales_dbt://models\gold\monthly_revenue.sql
+[0m12:09:57.996045 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f3b5301d-7074-4655-af18-dbda8581d6f1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002222975FD50>]}
+[0m12:09:58.037851 [debug] [MainThread]: Wrote artifact WritableManifest to D:\MEUS_PROJETOS\sales-pipeline\dbt\sales_dbt\target\manifest.json
+[0m12:09:58.067427 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\MEUS_PROJETOS\sales-pipeline\dbt\sales_dbt\target\semantic_manifest.json
+[0m12:09:58.084577 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f3b5301d-7074-4655-af18-dbda8581d6f1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002222F0B5350>]}
+[0m12:09:58.084577 [info ] [MainThread]: Found 9 models, 4 sources, 466 macros
+[0m12:09:58.085703 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f3b5301d-7074-4655-af18-dbda8581d6f1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002222F0934D0>]}
+[0m12:09:58.085703 [warn ] [MainThread]: The selection criterion 'gold_monthly_revenue' does not match any enabled nodes
+[0m12:09:58.086700 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m12:09:58.087701 [debug] [MainThread]: Command end result
+[0m12:09:58.102934 [debug] [MainThread]: Wrote artifact WritableManifest to D:\MEUS_PROJETOS\sales-pipeline\dbt\sales_dbt\target\manifest.json
+[0m12:09:58.104935 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\MEUS_PROJETOS\sales-pipeline\dbt\sales_dbt\target\semantic_manifest.json
+[0m12:09:58.106934 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\MEUS_PROJETOS\sales-pipeline\dbt\sales_dbt\target\run_results.json
+[0m12:09:58.106934 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ModelParamUsageDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m12:09:58.107935 [debug] [MainThread]: Command `dbt run` succeeded at 12:09:58.107935 after 2.05 seconds
+[0m12:09:58.107935 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022226F5C5D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022226F5C390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022226F5C510>]}
+[0m12:09:58.108935 [debug] [MainThread]: Flushing usage events
+[0m12:09:58.924465 [debug] [MainThread]: An error was encountered while trying to flush usage events

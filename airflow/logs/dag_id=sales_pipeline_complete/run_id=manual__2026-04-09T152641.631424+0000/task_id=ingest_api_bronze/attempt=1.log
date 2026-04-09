@@ -1,0 +1,19 @@
+[2026-04-09T15:26:42.514+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-04-09T15:26:42.547+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sales_pipeline_complete.ingest_api_bronze manual__2026-04-09T15:26:41.631424+00:00 [queued]>
+[2026-04-09T15:26:42.557+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sales_pipeline_complete.ingest_api_bronze manual__2026-04-09T15:26:41.631424+00:00 [queued]>
+[2026-04-09T15:26:42.558+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 3
+[2026-04-09T15:26:42.570+0000] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): ingest_api_bronze> on 2026-04-09 15:26:41.631424+00:00
+[2026-04-09T15:26:42.578+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'sales_pipeline_complete', 'ingest_api_bronze', 'manual__2026-04-09T15:26:41.631424+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/sales_pipeline_dag.py', '--cfg-path', '/tmp/tmpmefbccpb']
+[2026-04-09T15:26:42.581+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=185) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-04-09T15:26:42.581+0000] {standard_task_runner.py:91} INFO - Job 4: Subtask ingest_api_bronze
+[2026-04-09T15:26:42.581+0000] {standard_task_runner.py:63} INFO - Started process 187 to run task
+[2026-04-09T15:26:42.638+0000] {task_command.py:426} INFO - Running <TaskInstance: sales_pipeline_complete.ingest_api_bronze manual__2026-04-09T15:26:41.631424+00:00 [running]> on host 00ff0cf2a205
+[2026-04-09T15:26:42.710+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='walmir' AIRFLOW_CTX_DAG_ID='sales_pipeline_complete' AIRFLOW_CTX_TASK_ID='ingest_api_bronze' AIRFLOW_CTX_EXECUTION_DATE='2026-04-09T15:26:41.631424+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-09T15:26:41.631424+00:00'
+[2026-04-09T15:26:42.711+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-04-09T15:26:42.719+0000] {logging_mixin.py:188} INFO - ✅ Ingestão Python → Bronze
+[2026-04-09T15:26:42.719+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-04-09T15:26:42.720+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-04-09T15:26:42.729+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=sales_pipeline_complete, task_id=ingest_api_bronze, execution_date=20260409T152641, start_date=20260409T152642, end_date=20260409T152642
+[2026-04-09T15:26:42.755+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-04-09T15:26:42.776+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-04-09T15:26:42.777+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

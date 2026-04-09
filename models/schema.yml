@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: gold_monthly_revenue
+    description: "Receita mensal agregada"
+    columns:
+      - name: month
+        tests:
+          - unique
+          - not_null
+      - name: net_revenue
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: "net_revenue >= 0"
+      - name: total_orders
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: "total_orders > 0"
+
+  - name: gold_customer_summary
+    description: "Resumo clientes"
+    columns:
+      - name: avg_ticket
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: "avg_ticket > 0"
