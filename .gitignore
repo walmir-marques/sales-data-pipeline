@@ -1,0 +1,19 @@
+# Ambiente
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# dbt - arquivos gerados
+dbt/sales_dbt/target/
+dbt/sales_dbt/dbt_packages/
+dbt/sales_dbt/logs/
+dbt/logs/
+
+# Airflow - logs
+airflow/logs/
+
+# Sistema
+.DS_Store
+Thumbs.db
